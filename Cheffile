@@ -1,1 +1,16 @@
 site 'http://community.opscode.com/api/v1'
+
+cookbook 'nginx'
+cookbook 'unicorn'
+cookbook 'nodejs'
+
+cookbook 'redisio'
+#cookbook 'postgresql'
+
+cookbook 'icecast2'
+cookbook 'mpd', path: 'cookbooks-source'
+
+cookbook 'apt'
+cookbook 'git'
+cookbook 'ruby', path: 'cookbooks-source'
+cookbook 'main', path: 'cookbooks-source'

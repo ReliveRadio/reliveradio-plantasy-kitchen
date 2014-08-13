@@ -1,0 +1,55 @@
+{
+  "run_list": [
+    "git",
+    "nodejs",
+    "redisio::install",
+    "redisio::enable",
+    "nginx",
+    "unicorn",
+    "icecast2",
+    "mpd",
+    "ruby",
+    "main"
+  ],
+  "automatic": {
+    "ipaddress": "s17837361.onlinehome-server.info"
+  },
+  "ruby": {
+    "version": "2.1.2"
+  },
+  "nginx": {
+    "client_max_body_size": "50M",
+    "default_site_enabled": "false"
+  },
+  "postgresql": {
+    "password": {
+      "postgres": "hackme"
+    }
+  },
+  "nodejs": {
+    "install_method": "package"
+  },
+  "mpd": {
+    "channels": {
+      "mix": {
+        "name": "mpd_mix",
+        "bind": "localhost",
+        "socket": "/var/run/mpd/mix",
+        "port": "6601",
+        "icecast_password": "hackme"
+      },
+      "tech": {
+        "name": "mpd_tech",
+        "bind": "localhost",
+        "socket": "/var/run/mpd/tech",
+        "port": "6602",
+        "icecast_password": "hackme"
+      }
+    }
+  },
+  "icecast2": {
+    "authentication": {
+      "source-password": "hackme"
+    }
+  }
+}
