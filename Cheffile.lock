@@ -3,7 +3,7 @@ SITE
   specs:
     7-zip (1.0.2)
       windows (>= 1.2.2)
-    apt (2.5.0)
+    apt (2.5.2)
     ark (0.9.0)
       7-zip (>= 0.0.0)
       windows (>= 0.0.0)
@@ -57,11 +57,11 @@ SITE
 PATH
   remote: cookbooks-source
   specs:
-    main (0.3.0)
+    main (0.7.0)
       apt (>= 0.0.0)
     mpd (0.0.11)
       apt (>= 0.0.0)
-    ruby (0.1.0)
+    ruby (0.2.0)
       rbenv (>= 0.0.0)
       ruby_build (>= 0.0.0)
 
