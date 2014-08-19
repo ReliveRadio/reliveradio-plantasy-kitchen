@@ -10,6 +10,7 @@ SITE
     bluepill (2.3.1)
       rsyslog (>= 0.0.0)
     build-essential (2.0.6)
+    chef-sugar (2.0.0)
     chef_handler (1.1.6)
     dmg (2.2.0)
     git (4.0.2)
@@ -33,6 +34,12 @@ SITE
       build-essential (>= 0.0.0)
       yum-epel (>= 0.0.0)
     ohai (2.0.1)
+    openssl (2.0.0)
+      chef-sugar (>= 0.0.0)
+    postgresql (3.4.1)
+      apt (>= 1.9.0)
+      build-essential (>= 0.0.0)
+      openssl (>= 0.0.0)
     rbenv (1.7.1)
       apt (>= 0.0.0)
       build-essential (>= 0.0.0)
@@ -46,6 +53,7 @@ SITE
       build-essential (>= 0.0.0)
       yum (~> 3.0)
       yum-epel (>= 0.0.0)
+    sudo (2.7.0)
     ulimit (0.3.2)
     unicorn (2.0.0)
     windows (1.34.2)
@@ -54,14 +62,21 @@ SITE
     yum-epel (0.4.0)
       yum (~> 3.0)
 
+GIT
+  remote: https://github.com/optiflows-cookbooks/locales
+  ref: generate_current_locale
+  sha: 92cd973925f11114081c8acd0d9fd639ca008185
+  specs:
+    locales (0.3.1)
+
 PATH
   remote: cookbooks-source
   specs:
-    main (0.7.0)
+    main (0.9.0)
       apt (>= 0.0.0)
     mpd (0.0.11)
       apt (>= 0.0.0)
-    ruby (0.2.0)
+    ruby (0.3.0)
       rbenv (>= 0.0.0)
       ruby_build (>= 0.0.0)
 
@@ -69,11 +84,14 @@ DEPENDENCIES
   apt (>= 0)
   git (>= 0)
   icecast2 (>= 0)
+  locales (>= 0)
   main (>= 0)
   mpd (>= 0)
   nginx (>= 0)
   nodejs (>= 0)
+  postgresql (>= 0)
   redisio (>= 0)
   ruby (>= 0)
+  sudo (>= 0)
   unicorn (>= 0)
 

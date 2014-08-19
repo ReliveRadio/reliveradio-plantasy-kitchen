@@ -5,12 +5,16 @@ cookbook 'unicorn'
 cookbook 'nodejs'
 
 cookbook 'redisio'
-#cookbook 'postgresql'
+cookbook 'postgresql'
+# postgresql::server recipe needs locale be updated before installing. This forces regeneration of locale
+# branch ref can be removed as soon the pullrequest gets merged. https://github.com/phbergsmann/chef-locales/pull/22
+cookbook 'locales', :git => "https://github.com/optiflows-cookbooks/locales", :ref => "generate_current_locale"
 
 cookbook 'icecast2'
 cookbook 'mpd', path: 'cookbooks-source'
 
 cookbook 'apt'
+cookbook 'sudo'
 cookbook 'git'
 cookbook 'ruby', path: 'cookbooks-source'
 cookbook 'main', path: 'cookbooks-source'

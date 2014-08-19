@@ -1,11 +1,14 @@
 {
   "run_list": [
+    "sudo",
     "git",
     "nodejs",
     "redisio::install",
     "redisio::enable",
     "nginx",
     "unicorn",
+    "locales",
+    "postgresql::server",
     "icecast2",
     "mpd",
     "ruby",
@@ -14,30 +17,18 @@
   "automatic": {
     "ipaddress": "s17837361.onlinehome-server.info"
   },
-  "app": {
-    "name": "plantasy"
+  "authorization": {
+    "sudo": {
+      "groups": ["admin", "sysadmin"],
+      "users": ["deploy"],
+      "passwordless": "true"
+    }
   },
   "ruby": {
     "version": "2.1.2"
   },
   "nginx": {
-    "client_max_body_size": "50M",
     "default_site_enabled": "false"
-  },
-  "unicorn": {
-    "options": { "backlog": "64" },
-    "preload_app": true,
-    "worker_processes": "2",
-    "worker_timeout": "30",
-
-    "after_fork": "defined?(ActiveRecord::Base) and ActiveRecord::Base.establish_connection",
-    "before_fork": "defined?(ActiveRecord::Base) and ActiveRecord::Base.connection.disconnect!",
-    "config_file": "/etc/unicorn/plantasy.rb",
-    "listen": "/tmp/unicorn.plantasy.sock",
-    "pid": "/var/www/plantasy/pids/unicorn.pid",
-    "stderr_path": "/var/www/plantasy/log/unicorn.log",
-    "stdout_path": "/var/www/plantasy/unicorn.log",
-    "working_directory": "/var/www/plantasy/current"
   },
   "postgresql": {
     "password": {
