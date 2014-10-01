@@ -3,7 +3,7 @@
     "sudo",
     "git",
     "nodejs",
-    "redisio::install",
+    "redisio",
     "redisio::enable",
     "nginx",
     "unicorn",
