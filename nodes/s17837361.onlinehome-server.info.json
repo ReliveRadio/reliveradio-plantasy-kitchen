@@ -10,7 +10,6 @@
     "locales",
     "postgresql::server",
     "icecast2",
-    "mpd",
     "ruby",
     "main"
   ],
@@ -38,22 +37,6 @@
   "nodejs": {
     "install_method": "package"
   },
-  "mpd": {
-    "channels": {
-      "mix": {
-        "name": "mpd_mix",
-        "bind": "localhost",
-        "socket": "/var/run/mpd/mix",
-        "port": "6601",
-        "icecast_password": "hackme"
-      },
-      "tech": {
-        "name": "mpd_tech",
-        "bind": "localhost",
-        "socket": "/var/run/mpd/tech",
-        "port": "6602",
-        "icecast_password": "hackme"
-      }
     }
   },
   "icecast2": {

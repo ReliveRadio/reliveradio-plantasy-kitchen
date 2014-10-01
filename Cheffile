@@ -11,7 +11,6 @@ cookbook 'postgresql'
 cookbook 'locales', :git => "https://github.com/optiflows-cookbooks/locales", :ref => "generate_current_locale"
 
 cookbook 'icecast2'
-cookbook 'mpd', path: 'cookbooks-source'
 
 cookbook 'apt'
 cookbook 'sudo'

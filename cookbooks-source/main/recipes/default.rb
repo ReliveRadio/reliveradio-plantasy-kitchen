@@ -19,4 +19,8 @@ package "libtag1-dev"
 
 package "apache2" do
 	action :remove
+package "mpd"
+# disable the service that is installed by the package
+service "mpd" do
+	action [:disable, :stop]
 end
