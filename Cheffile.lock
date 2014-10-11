@@ -21,6 +21,7 @@ SITE
       yum (~> 3.0)
       yum-epel (>= 0.0.0)
     icecast2 (0.0.1)
+    locale (1.0.2)
     nginx (2.7.4)
       apt (~> 2.2)
       bluepill (~> 2.3)
@@ -45,9 +46,6 @@ SITE
       build-essential (>= 0.0.0)
       git (>= 0.0.0)
       ohai (>= 1.1)
-    redisio (2.2.3)
-      build-essential (>= 0.0.0)
-      ulimit (>= 0.1.2)
     rsyslog (1.12.2)
     ruby_build (0.8.0)
     runit (1.5.10)
@@ -64,18 +62,27 @@ SITE
       yum (~> 3.0)
 
 GIT
-  remote: https://github.com/optiflows-cookbooks/locales
-  ref: generate_current_locale
-  sha: 92cd973925f11114081c8acd0d9fd639ca008185
+  remote: https://github.com/DataDog/chef-redisio
+  ref: master
+  sha: 2b7fc068417fb95758b07bc4f6e3c4a450419812
   specs:
-    locales (0.3.1)
+    redisio (1.7.1)
+      ulimit (>= 0.1.2)
+
+GIT
+  remote: https://github.com/phlipper/chef-monit
+  ref: master
+  sha: 9aecee976641ad2f9b3b3c1924d6ce97b8a17216
+  specs:
+    monit (1.5.4)
+      build-essential (>= 0.0.0)
 
 PATH
   remote: cookbooks-source
   specs:
-    main (0.14.0)
+    main (0.17.0)
       apt (>= 0.0.0)
-    ruby (0.4.0)
+    ruby (0.5.0)
       rbenv (>= 0.0.0)
       ruby_build (>= 0.0.0)
 
@@ -83,8 +90,9 @@ DEPENDENCIES
   apt (>= 0)
   git (>= 0)
   icecast2 (>= 0)
-  locales (>= 0)
+  locale (>= 0)
   main (>= 0)
+  monit (>= 0)
   nginx (>= 0)
   nodejs (>= 0)
   postgresql (>= 0)

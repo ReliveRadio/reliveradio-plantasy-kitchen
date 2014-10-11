@@ -4,13 +4,11 @@ cookbook 'nginx'
 cookbook 'unicorn'
 cookbook 'nodejs'
 
-cookbook 'redisio'
+cookbook 'redisio', :git => "https://github.com/brianbianco/redisio", :ref => "master"
 cookbook 'postgresql'
-# postgresql::server recipe needs locale be updated before installing. This forces regeneration of locale
-# branch ref can be removed as soon the pullrequest gets merged. https://github.com/phbergsmann/chef-locales/pull/22
-cookbook 'locales', :git => "https://github.com/optiflows-cookbooks/locales", :ref => "generate_current_locale"
+cookbook 'locale'
 
-cookbook 'icecast2'
+cookbook 'monit', :git => "https://github.com/phlipper/chef-monit", :ref => "master"
 
 cookbook 'apt'
 cookbook 'sudo'

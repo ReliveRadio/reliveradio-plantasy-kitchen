@@ -26,6 +26,8 @@ package "mosh"
 package "imagemagick"
 package "libtag1-dev"
 
+package "icecast2"
+
 # remove apache if it was preinstalled on the vps image
 package "apache2" do
 	action :remove
