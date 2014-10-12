@@ -1,0 +1,1 @@
+This is a Chef kitchen to provision a server for reliveradio-plantasy. Instructions on how to use this can be found in the [reliveradio-plantasy repository](https://github.com/ReliveRadio/reliveradio-plantasy/blob/master/README.md).
