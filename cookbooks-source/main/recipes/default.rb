@@ -33,6 +33,12 @@ package "apache2" do
 	action :remove
 end
 
+# remove postfix if it was preinstalled on the vps image
+package "postfix" do
+	action :remove
+end
+
+
 package "mpd"
 # disable the service that is installed by the package
 service "mpd" do

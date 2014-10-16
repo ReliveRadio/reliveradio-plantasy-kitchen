@@ -9,8 +9,8 @@ SITE
       windows (>= 0.0.0)
     bluepill (2.3.1)
       rsyslog (>= 0.0.0)
-    build-essential (2.0.6)
-    chef-sugar (2.3.0)
+    build-essential (2.1.0)
+    chef-sugar (2.4.1)
     chef_handler (1.1.6)
     dmg (2.2.0)
     git (4.0.2)
@@ -20,7 +20,6 @@ SITE
       windows (>= 0.0.0)
       yum (~> 3.0)
       yum-epel (>= 0.0.0)
-    icecast2 (0.0.1)
     locale (1.0.2)
     nginx (2.7.4)
       apt (~> 2.2)
@@ -37,7 +36,7 @@ SITE
     ohai (2.0.1)
     openssl (2.0.0)
       chef-sugar (>= 0.0.0)
-    postgresql (3.4.6)
+    postgresql (3.4.10)
       apt (>= 1.9.0)
       build-essential (>= 0.0.0)
       openssl (>= 0.0.0)
@@ -57,16 +56,17 @@ SITE
     unicorn (2.0.0)
     windows (1.34.6)
       chef_handler (>= 0.0.0)
-    yum (3.3.2)
+    yum (3.4.0)
     yum-epel (0.5.1)
       yum (~> 3.0)
 
 GIT
-  remote: https://github.com/DataDog/chef-redisio
+  remote: https://github.com/brianbianco/redisio
   ref: master
-  sha: 2b7fc068417fb95758b07bc4f6e3c4a450419812
+  sha: b1707226879de5560de650c2ddce780297fe35d7
   specs:
-    redisio (1.7.1)
+    redisio (2.2.4)
+      build-essential (>= 0.0.0)
       ulimit (>= 0.1.2)
 
 GIT
@@ -80,7 +80,7 @@ GIT
 PATH
   remote: cookbooks-source
   specs:
-    main (0.17.0)
+    main (0.18.0)
       apt (>= 0.0.0)
     ruby (0.5.0)
       rbenv (>= 0.0.0)
@@ -89,7 +89,6 @@ PATH
 DEPENDENCIES
   apt (>= 0)
   git (>= 0)
-  icecast2 (>= 0)
   locale (>= 0)
   main (>= 0)
   monit (>= 0)
