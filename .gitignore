@@ -1,2 +1,3 @@
-/cookbooks/
-/tmp/librarian/
+cookbooks/
+tmp/librarian/
+.vagrant
