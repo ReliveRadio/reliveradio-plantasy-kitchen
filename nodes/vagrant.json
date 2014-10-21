@@ -1,0 +1,47 @@
+{
+  "run_list": [
+    "sudo",
+    "git",
+    "monit",
+    "ruby",
+    "nodejs",
+    "redisio",
+    "redisio::enable",
+    "nginx",
+    "unicorn",
+    "locale",
+    "postgresql::server",
+    "main"
+  ],
+  "automatic": {
+    "ipaddress": "localhost"
+  },
+  "authorization": {
+    "sudo": {
+      "groups": ["admin", "sysadmin"],
+      "users": ["vagrant"],
+      "passwordless": "true"
+    }
+  },
+  "ruby": {
+    "version": "2.1.2"
+  },
+  "nginx": {
+    "default_site_enabled": "false"
+  },
+  "nodejs": {
+    "install_method": "package"
+  },
+  "postgresql": {
+    "password": {
+      "postgres": "hackme"
+    }
+  },
+  "monit" : {
+    "web_interface":  {
+      "enable": "true",
+      "address": "localhost",
+      "allow": ["localhost"]
+    }
+  }
+}
